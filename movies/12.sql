@@ -1,0 +1,1 @@
+select c.title from people a, stars b, movies c where a.name = "Johnny Depp" and a.id = b.person_id and b.movie_id = c.id intersect select c.title from people a, stars b, movies c where a.name = "Helena Bonham Carter" and a.id = b.person_id and b.movie_id = c.id;

@@ -1,0 +1,1 @@
+select count(*) from movies a, ratings b where a.id = b.movie_id and b.rating = 10.0;

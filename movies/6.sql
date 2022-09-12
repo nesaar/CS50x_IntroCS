@@ -1,0 +1,1 @@
+select sum(b.rating) / count(*) from movies a, ratings b where a.year = "2012" and a.id = b.movie_id

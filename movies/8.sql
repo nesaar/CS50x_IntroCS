@@ -1,0 +1,1 @@
+select c.name from movies a, stars b, people c where a.title = "Toy Story" and a.id = b.movie_id and b.person_id = c.id;

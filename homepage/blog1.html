@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!--Bootstrap, StyleSheets and Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="main.css">
+      <meta charset="utf-8">
+        <title>Boo</title>
+    </head>
+    <body>
+      <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navbar">
+          <a class="navbar-brand" id="logo" href="index.html">Darra </a>
+          <!--Navbar buttons-->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item" id="test">
+                <a class="nav-link" href="https://www.linkedin.com/in/nesaarbanderker/"><i class="fa fa-linkedin"> </i> LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <!--Main Page Content-->
+
+      <main role="main">
+
+        <section class="jumbotron text-left ">
+          <div class="container">
+            <h3 class="post-title entry-title">
+              <a href="http://raasensthoughts.blogspot.com/2013/11/salad-water-go-together-like.html">Salad &amp; Water. Go together like... </a>
+              </h3>
+              <div class="post-header">
+              <div class="post-header-line-1"></div>
+              </div>
+              <div class="post-body entry-content">
+              <p dir="ltr">So Kid1 has a lunch plate with chicken, salads and garlic sour dough bread. Like the pic below. He hates salads, especially the leafy parts so he quips up: "I hate water. It tastes like nothing. Salads taste worse than water". </p>
+              <p dir="ltr">I made him eat it all. Wish I had a pic of him having that involuntary spasm that sometimes precedes throwing up. </p>
+              <div class="separator" style="clear: both; text-align: center;"> <a href="http://lh3.ggpht.com/-7z7eOb88rAs/UpHv9bSUd3I/AAAAAAAANw8/mQjn0oC0oBQ/s1600/20131124_134500.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"> <img border="0" src="./Raasens Thoughts_ Salad &amp; Water. Go together like..._files/20131124_134500.jpg"> </a> </div>
+              <div style="clear: both;"></div>
+              </div>
+              <div class="post-footer">
+              <div class="post-footer-line post-footer-line-1"><span class="post-author vcard">
+              Posted by
+              <span class="fn">Raasens Thoughts</span>
+              </span>
+              <span class="post-timestamp">
+              at
+              <a class="timestamp-link" href="http://raasensthoughts.blogspot.com/2013/11/salad-water-go-together-like.html" rel="bookmark" title="permanent link"><abbr class="published" title="2013-11-24T14:24:00+02:00">2:24 pm</abbr></a>
+              </span>
+              <span class="post-comment-link">
+              </span>
+          </div>
+        </section>
+
+
+      </main>
+
+
+      <!-- Optional Bootstrap JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+      <!-- Random Louis Name Generator-->
+      <script>
+
+        const names = ["Boosta Boy", "Boo Boo", "Sausage Bear", "Panther Bear",  "Mushroom", "Boom Boom", "Boo", "Chunky Bear", "Boosta"];
+
+        const newNick = function() {
+          let num = Math.floor(Math.random() * names.length);
+
+          $(".nickname").text(names[num]);
+        }
+
+        $(".new-nick").on("click", function() {
+          event.preventDefault();
+          newNick();
+        });
+
+        $(document).ready(function() {
+          newNick();
+        });
+
+        </script>
+    </body>
+</html>

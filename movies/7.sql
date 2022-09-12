@@ -1,0 +1,1 @@
+select title, rating from movies a, ratings b where a.year = "2010" and a.id = b.movie_id and rating != 0.00 order by rating desc, title asc;

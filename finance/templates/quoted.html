@@ -1,0 +1,25 @@
+    {% extends "layout.html" %}
+
+{% block title %}
+    Quotation
+{% endblock %}
+
+{% block main %}
+    <form>
+        <div class="mb-3">
+            <label>Stock Name
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="name" name="name" value="{{ stockquote.name }}" type="value">
+            </label>
+        </div>
+        <div class="mb-3">
+            <label>Stock Price
+                <input class="form-control mx-auto w-auto" id="price" name="price" value="{{ stockquote.price | usd }}" type="value">
+            </label>
+        </div>
+        <div class="mb-3">
+            <label>Stock Symbol
+                <input class="form-control mx-auto w-auto" id="symbol" name="symbol" value="{{ stockquote.symbol }}" type="value">
+            </label>
+        </div>
+    </form>
+{% endblock %}

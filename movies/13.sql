@@ -1,0 +1,1 @@
+select b.name from stars a, people b where a.person_id = b.id and a.movie_id in (select distinct b.movie_id from people a, stars b where a.name = "Kevin Bacon" and a.birth = "1958" and b.person_id = a.id) and name != "Kevin Bacon";

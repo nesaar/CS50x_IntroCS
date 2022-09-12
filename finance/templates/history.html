@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Landing
+{% endblock %}
+
+{% block main %}
+<main class="container py-5 text-center">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-start">Name</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">Purchase Date</th>
+            </tr>
+        </thead>
+       <tbody>
+            {% for txn in data %}
+                <tr>
+                    <td class="text-start">{{ txn.stocksymbol }}</td>
+                    <td class="text-start">{{ txn.stockname }}</td>
+                    <td class="text-end">{{ txn.sharespurchased }}</td>
+                    <td class="text-end">{{ txn.txnprice }}</td>
+                    <td class="text-end">{{ txn.purchasedatetime }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</main>
+{% endblock %}
