@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Score
+{% endblock %}
+
+{% block main %}
+<main class="container py-5 text-center">
+    <form action="/score" method="get">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <div><h5>FlashWord of the day: {{ soundslike }}</h5></div>
+                <div><h6 style="color:red">Score: {{ score }}/5 </h6></div>
+                
+            </div>
+        </div>
+        <div>
+            <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-start">#</th>
+                    <th class="text-start">Question</th>
+                    <th class="text-end">Your Answer/The Answer</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for question in questionsoftheday %}
+                        <tr>
+                            <td class="text-start">{{ question['id'] }}</td>
+                            <td class="text-start">{{ question['question'] }}</td>
+                            <td class="text-end"><input class="mb-1" style="color:{{ ans[question['id']-1]['correct'] }}" name="A{{ question['id'] }}" value="{{ ans[question['id']-1]['uanswer'] }}" type="text" readonly>
+                                <input class="mb-1" name="A{{ question['id'] }}" value="{{ questionsoftheday[question['id']-1]['answer'] }}" type="text" readonly>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+        </div>
+    </form>
+</main>
+{% endblock %}

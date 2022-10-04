@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}
+    Game
+{% endblock %}
+
+{% block main %}
+<form action="/" method="post">
+    <main class="container py-5 text-center">
+    
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <div>Game of quick lateral and associative thinking</div>
+                    <div>You get a word of the day and questions whose answers need to contain what the word of the day sounds like</div>     
+                </div>
+            </div>
+            
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <div><p style="color:red">FlashWord of the day: {{ soundslike }}</p></div>
+                    <div><p style="color:orange">{{ description }}</p></div>
+                    <div><p style="color:blue">Example question: {{ exq }}</p></div>
+                    <div><p style="color:blue">Answer: {{ exa }}</p></div>
+                </div>
+            </div>
+            
+        <button class="btn btn-primary" type="submit">Play</button>
+
+    </main>
+</form>
+{% endblock %}
